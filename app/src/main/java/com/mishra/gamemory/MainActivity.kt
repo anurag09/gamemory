@@ -25,12 +25,9 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.mishra.gamemory.R.color.color_progress_full
 import com.mishra.gamemory.R.color.color_progress_none
-import com.mishra.gamemory.modles.BoardSize
+import com.mishra.gamemory.modles.*
 import com.mishra.gamemory.modles.BoardSize.*
 import com.mishra.gamemory.modles.BoardSize.Companion.getByValue
-import com.mishra.gamemory.modles.EXTRA_GAME_NAME
-import com.mishra.gamemory.modles.MemoryGame
-import com.mishra.gamemory.modles.UserListImages
 import com.squareup.picasso.Picasso
 
 class MainActivity : AppCompatActivity() {
@@ -124,7 +121,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun downLoadCustomGame(customGameName: String) {
-        db.collection("games").document(customGameName).get()
+        db.collection(GAMES).document(customGameName).get()
             .addOnSuccessListener {document ->
                 val userListImages = document.toObject(UserListImages::class.java)
                 if(userListImages?.images == null){
