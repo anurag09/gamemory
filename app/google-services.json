@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "794043054416",
+    "project_id": "gamemory-abc96",
+    "storage_bucket": "gamemory-abc96.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794043054416:android:e93bea72e9c3d456b05455",
+        "android_client_info": {
+          "package_name": "com.mishra.gamemory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794043054416-3ofi3vd0gfur5qui1ihak7bl12283v6s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBPhSoFFu2NATU9XXieTfIllPdsfh5AUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794043054416-3ofi3vd0gfur5qui1ihak7bl12283v6s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
