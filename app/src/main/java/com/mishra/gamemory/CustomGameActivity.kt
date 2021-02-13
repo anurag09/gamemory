@@ -121,14 +121,14 @@ class CustomGameActivity : AppCompatActivity() {
         if (requestCode != REQUEST_CODE || resultCode != RESULT_OK || data == null) {
 
         }
-
         data?.clipData?.let { result ->
-            (0..result.itemCount).forEach { index ->
-                if (chosenImageUris.size < index) {
-                    chosenImageUris.add(result.getItemAt(index - 1).uri)
+            (1..result.itemCount).forEach { index ->
+                if (chosenImageUris.size < boardSize.pairs()) {
+                    chosenImageUris.add(result.getItemAt(index-1).uri)
                 }
             }
-        }
+        } ?: chosenImageUris.add(data?.data!!)
+
         adapter.notifyDataSetChanged()
         supportActionBar?.title = "Choose pics ${chosenImageUris.size} / ${boardSize.pairs()}"
         saveButton.isEnabled = shouldEnableButton()
